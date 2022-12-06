@@ -45,8 +45,8 @@ export class ProductComponent implements OnInit{
     })
   }
   addToCart(product:Product){
-    this.toastrService.success("added to cart", product.productName);
     this.cartService.addToCart(product);
+    this.toastrService.success("added to cart", product.productName);
     
   }
 
