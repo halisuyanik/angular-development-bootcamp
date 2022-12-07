@@ -2,7 +2,7 @@
     <span class="sr-only">Loading...</span>
 </div> -->
 
-<div class="mb-3">
+<div *ngnIf="dataLoaded" class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Search</label>
     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="search product name...">
 </div>
@@ -10,7 +10,7 @@
     {{filterText}} searched.
 </div>
 
-<table  class="table">
+<table *ngnIf="dataLoaded" class="table">
     <thead>
         <tr>
             <th>Id</th>
